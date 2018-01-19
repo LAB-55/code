@@ -220,7 +220,7 @@ ArdublocklyServer.jsonToHtmlDropdown = function(jsonObj) {
  *     have one argument to receive the JSON response.
  */
 ArdublocklyServer.requestCompilerLocation = function(callback) {
-  ArdublocklyServer.getJson('/settings/compiler', callback);
+  // ArdublocklyServer.getJson('/settings/compiler', callback);
 };
 
 /**
@@ -240,7 +240,7 @@ ArdublocklyServer.setCompilerLocation = function(new_path, callback) {
  *     have one argument to receive the JSON response.
  */
 ArdublocklyServer.requestSketchLocation = function(callback) {
-   ArdublocklyServer.getJson('/settings/sketch', callback);
+   // ArdublocklyServer.getJson('/settings/sketch', callback);
 };
 
 /**
@@ -263,7 +263,7 @@ ArdublocklyServer.setSketchLocation = function(new_path, callback) {
  *     have one argument to receive the JSON response.
  */
 ArdublocklyServer.requestArduinoBoards = function(callback) {
-  ArdublocklyServer.getJson('/settings/board', callback);
+  // ArdublocklyServer.getJson('/settings/board', callback);
 };
 
 /**
@@ -288,7 +288,7 @@ ArdublocklyServer.setArduinoBoard = function(new_board, callback) {
  *     have one argument to receive the JSON response.
  */
 ArdublocklyServer.requestSerialPorts = function(callback) {
-  ArdublocklyServer.getJson('/settings/serial', callback);
+  // ArdublocklyServer.getJson('/settings/serial', callback);
 };
 
 /**
@@ -312,7 +312,7 @@ ArdublocklyServer.setSerialPort = function(new_port, callback) {
  *     have one argument to receive the JSON response.
  */
 ArdublocklyServer.requestIdeOptions = function(callback) {
-  ArdublocklyServer.getJson('/settings/ide', callback);
+  // ArdublocklyServer.getJson('/settings/ide', callback);
 };
 
 /**

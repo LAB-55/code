@@ -37,15 +37,15 @@ Ardublockly.init = function() {
 /** Binds functions to each of the buttons, nav links, and related. */
 Ardublockly.bindActionFunctions = function() {
   // Navigation buttons
-  Ardublockly.bindClick_('button_load', Ardublockly.loadUserXmlFile);
-  Ardublockly.bindClick_('button_save', Ardublockly.saveXmlFile);
+  // Ardublockly.bindClick_('button_load', Ardublockly.loadUserXmlFile);
+  // Ardublockly.bindClick_('button_save', Ardublockly.saveXmlFile);
   Ardublockly.bindClick_('button_delete', Ardublockly.discardAllBlocks);
 
   // Side menu buttons, they also close the side menu
-  Ardublockly.bindClick_('menu_load', function() {
-    Ardublockly.loadUserXmlFile();
-    $('.button-collapse').sideNav('hide');
-  });
+  // Ardublockly.bindClick_('menu_load', function() {
+  //   Ardublockly.loadUserXmlFile();
+  //   $('.button-collapse').sideNav('hide');
+  // });
   Ardublockly.bindClick_('menu_save', function() {
     Ardublockly.saveXmlFile();
     $('.button-collapse').sideNav('hide');
@@ -58,25 +58,32 @@ Ardublockly.bindActionFunctions = function() {
     Ardublockly.openSettings();
     $('.button-collapse').sideNav('hide');
   });
+
+  
   Ardublockly.bindClick_('menu_example_1', function() {
     Ardublockly.loadServerXmlFile('./examples/blink.xml');
     $('.button-collapse').sideNav('hide');
+    $('#sketch_name').val('blink');
   });
   Ardublockly.bindClick_('menu_example_2', function() {
     Ardublockly.loadServerXmlFile('./examples/serial_print_ascii.xml');
     $('.button-collapse').sideNav('hide');
+    $('#sketch_name').val('serial_print_ascii');
   });
   Ardublockly.bindClick_('menu_example_3', function() {
     Ardublockly.loadServerXmlFile('./examples/serial_repeat_game.xml');
     $('.button-collapse').sideNav('hide');
+    $('#sketch_name').val('serial_repeat_game');
   });
   Ardublockly.bindClick_('menu_example_4', function() {
     Ardublockly.loadServerXmlFile('./examples/servo_knob.xml');
     $('.button-collapse').sideNav('hide');
+    $('#sketch_name').val('servo_knob');
   });
   Ardublockly.bindClick_('menu_example_5', function() {
     Ardublockly.loadServerXmlFile('./examples/stepper_knob.xml');
     $('.button-collapse').sideNav('hide');
+    $('#sketch_name').val('stepper_knob');
   });
 
   // Floating buttons
@@ -758,6 +765,7 @@ Ardublockly.bindClick_ = function(el, func) {
     e.preventDefault();
     func();
   };
-  el.addEventListener('ontouchend', propagateOnce);
-  el.addEventListener('click', propagateOnce);
+    el.addEventListener('ontouchend', propagateOnce);
+    el.addEventListener('click', propagateOnce);
+  
 };

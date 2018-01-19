@@ -42,7 +42,12 @@ Ardublockly.materializeJsInit = function() {
   $('.tooltipped').tooltip({'delay': 50});
   // Select menus
   $('select').material_select();
-};
+  $('.top_menu').click(function(){
+    var source = $(this).data('source-id');
+    Ardublockly.loadServerXmlFile('./examples/'+ source +'.xml');
+    $('#sketch_name').val(source);
+  })
+};``
 
 /** Binds the event listeners relevant to the page design. */
 Ardublockly.bindDesignEventListeners = function() {
