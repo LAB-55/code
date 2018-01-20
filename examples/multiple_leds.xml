@@ -43,6 +43,63 @@
                             <field name="NUM">1000</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="io_digitalwrite" id="yPnP*nxq#{_6]wGvx(Bh">
+                            <field name="PIN">13</field>
+                            <value name="STATE">
+                              <block type="io_highlow" id="Q5+XYxX+|U6.TDI|It/?">
+                                <field name="STATE">LOW</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="time_delay" id="]T)eeB7C+ylx-!TA*IU;">
+                                <value name="DELAY_TIME_MILI">
+                                  <block type="math_number" id="Fx]x0rP9R(-EcvJVzw}L">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="io_digitalwrite" id="4iEL:S3NY1rK0X),ppWL">
+                                    <field name="PIN">12</field>
+                                    <value name="STATE">
+                                      <block type="io_highlow" id="5OTKpO!G!03HN/j@ur`1">
+                                        <field name="STATE">LOW</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="time_delay" id="W%#rwWr7sx=@)9},-+Lf">
+                                        <value name="DELAY_TIME_MILI">
+                                          <block type="math_number" id="24|_;WnV;JbK!Kioi0k|">
+                                            <field name="NUM">1000</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="io_digitalwrite" id="c8r;xs{+n@2uIO|:6TA5">
+                                            <field name="PIN">11</field>
+                                            <value name="STATE">
+                                              <block type="io_highlow" id="o7tVkH]0|#Ud]g]L/2GW">
+                                                <field name="STATE">LOW</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="time_delay" id="4/[P3kv!5ftR5|[reJ]@">
+                                                <value name="DELAY_TIME_MILI">
+                                                  <block type="math_number" id="Gsz}^V@uW%%sX`mp=^]g">
+                                                    <field name="NUM">1000</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
