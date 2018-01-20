@@ -50,6 +50,13 @@ Ardublockly.bindActionFunctions = function() {
     Ardublockly.saveXmlFile();
     $('.button-collapse').sideNav('hide');
   });
+  Ardublockly.bindClick_('menu_save_ino', function() {
+    Ardublockly.saveTextFileAs(
+      document.getElementById('sketch_name').value + '.ino',
+      Ardublockly.PREV_ARDUINO_CODE_
+    );
+    $('.button-collapse').sideNav('hide');
+  });
   Ardublockly.bindClick_('menu_delete', function() {
     Ardublockly.discardAllBlocks();
     $('.button-collapse').sideNav('hide');
