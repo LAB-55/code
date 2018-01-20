@@ -42,6 +42,17 @@ Ardublockly.materializeJsInit = function() {
   $('.tooltipped').tooltip({'delay': 50});
   // Select menus
   $('select').material_select();
+  $('#copy_ard_code').click(function(){
+    try{
+      var t = $("<input>");
+      // t.css({"visibility":"none"})
+      $("body").append(t);
+      t.val( Ardublockly.PREV_ARDUINO_CODE_ ).select();
+      document.execCommand("copy");
+      t.remove();
+      Materialize.toast('<span class="yellow-text"> Code copied! </span>', 2000, 'rounded') 
+    }catch(e){}
+  })
   $('.top_menu').click(function(){
     var source = $(this).data('source-id');
     Ardublockly.loadServerXmlFile('./examples/'+ source +'.xml');
