@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
   <link rel="stylesheet" href="prettify/arduino.css">
   <link rel="stylesheet" href="ardublockly.css" media="screen,projection">
-  <style type="text/css"> .hidden{ display: none!important}.dropdown-content {min-width: 180px!important}</style>
+  <style type="text/css"> .hidden{ display: none!important}.dropdown-content {min-width: 180px!important}#copy_ard_code{position: absolute; right: 15px; bottom: 15px; }</style>
   <!-- Ardublockly - These three files contain the compress version -->
   <script src="./blockly/blockly_compressed.js"></script>
   <script src="./blockly/blocks_compressed.js"></script>
@@ -99,7 +99,8 @@
     <li class="no-padding">
       <ul>
         <li id="menu_load hidden"><a href="#" class="hidden"><span class="translatable_open">Open</span><i class="mdi-file-file-upload left"></i></a></li>
-        <li id="menu_save"><a href="#"><span class="translatable_save">Save</span><i class="mdi-file-file-download left"></i></a></li>
+        <li id="menu_save_ino"><a href="#"><span class="translatable_save">Save (.ino)</span><i class="mdi-file-file-download left"></i></a></li>
+        <li id="menu_save"><a href="#"><span class="translatable_save">Save (.xml)</span><i class="mdi-file-file-download left"></i></a></li>
         <li id="menu_delete"><a href="#"><span class="translatable_deleteAll">Delete All</span><i class="mdi-action-delete left"></i></a></li>
         <li id="menu_settings"><a href="#"><span class="translatable_settings">Settings</span><i class="mdi-action-settings left"></i></a></li>
         <li id="menu_bug"><a href="https://github.com/carlosperate/ardublockly/wiki" target="_blank"><span class="translatable_documentation">Documentation</span><i class="mdi-action-help left"></i></a></li>
@@ -150,8 +151,9 @@
               <span class="collapsible_logo">{ }</span>
               <span class="translatable_arduinoSourceCode">Arduino Source Code</span>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body" style="position:relative">
               <pre id="content_arduino" class="content content_height_transition content_arduino_large"></pre>
+              <a class="btn-floating btn-large waves-effect waves-light teal z-depth-1-half" id="copy_ard_code"><i class="mdi-content-content-copy"></i></a>  
             </div>
           </li>
           <li>
