@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#00878F">
   <link rel="icon" href="img/favicon.ico">
-  <title class="translatable_title">Ardublockly</title>
+  <title class="translatable_title">Ardublockly | Lab55</title>
 
   <!-- Materialize, Prettify, and Ardublockly CSS -->
   <link rel="stylesheet" href="materialize/materialize.css" media="screen,projection">
@@ -79,6 +79,7 @@
               <li class="top_menu" data-source-id="serial_repeat_game"><a href="#!">Serial repeat game</a></li>
               <li class="top_menu" data-source-id="servo_knob"><a href="#!">Servo knob</a></li>
               <li class="top_menu" data-source-id="stepper_knob"><a href="#!">Stepper knob</a></li>
+              <li class="top_menu" data-source-id="rgb_led"><a href="#!">RGB LED</a></li>
               <li class="top_menu" data-source-id="multiple_leds"><a href="#!">Multiple Leds</a></li>
               <li class="top_menu" data-source-id="PIR_Example"><a href="#!">PIR Motion</a></li>
       </ul>
@@ -156,7 +157,7 @@
             </div>
             <div class="collapsible-body" style="position:relative">
               <pre id="content_arduino" class="content content_height_transition content_arduino_large"></pre>
-              <a class="btn-floating btn-large waves-effect waves-light teal z-depth-1-half" id="copy_ard_code"><i class="mdi-content-content-copy"></i></a>  
+              <a class="btn-floating btn-large waves-effect waves-light teal z-depth-1-half tooltipped" data-position="left" data-delay="50" data-tooltip="Copy the Code" id="copy_ard_code"><i class="mdi-content-content-copy"></i></a>  
             </div>
           </li>
           <li>
@@ -267,5 +268,15 @@
       Ardublockly.init();
     });
   </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112801544-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112801544-1');
+</script>
+
 </body>
 </html>
