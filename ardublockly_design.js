@@ -44,7 +44,7 @@ Ardublockly.materializeJsInit = function() {
   $('select').material_select();
   $('#copy_ard_code').click(function(){
     try{
-      var t = $("<input>");
+      var t = $("<textarea>");
       // t.css({"visibility":"none"})
       $("body").append(t);
       t.val( Ardublockly.PREV_ARDUINO_CODE_ ).select();
