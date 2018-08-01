@@ -100,7 +100,10 @@ Ardublockly.loadXmlBlockFile = function(xmlFile, cbSuccess, cbError) {
         var success = Ardublockly.replaceBlocksfromXml(request.responseText);
         cbSuccess(success);
       } else {
-        cbError();
+        alert("Check Filename.")
+        window.location = "/";
+        return false;
+        // cbError();
       }
     }
   };

@@ -53,10 +53,28 @@ Ardublockly.materializeJsInit = function() {
       Materialize.toast('<span class="yellow-text"> Code copied! </span>', 2000, 'rounded') 
     }catch(e){}
   })
+
+  // $(window).bind('hashchange', function() {
+    var source = window.location.hash.toLowerCase();
+    if( source.length > 3){
+      // if( $.head(''))
+        // './examples/'+ source.substr(1) +'.xml'
+      if(! Ardublockly.loadServerXmlFile('./examples/'+ source.substr(1) +'.xml') ){
+        window.history.back()
+      }
+      $('#sketch_name').val(source);      
+    }
+    // console.log(source);
+    // var source = $(this).data('source-id');
+
+    // originalHash = newHash;
+  // });
+
   $('.top_menu').click(function(){
     var source = $(this).data('source-id');
     Ardublockly.loadServerXmlFile('./examples/'+ source +'.xml');
     $('#sketch_name').val(source);
+    window.location.hash = source; 
   })
 };``
 

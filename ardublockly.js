@@ -247,22 +247,26 @@ Ardublockly.loadServerXmlFile = function(xmlFile) {
     var loadXmlCb = function(sucess) {
       if (sucess) {
         Ardublockly.renderContent();
+        return true;
       } else {
         Ardublockly.alertMessage(
             Ardublockly.getLocalStr('invalidXmlTitle'),
             Ardublockly.getLocalStr('invalidXmlBody'),
             false);
       }
+      return false
     };
     var connectionErrorCb = function() {
+      return false;
       Ardublockly.openNotConnectedModal();
     };
     Ardublockly.loadXmlBlockFile(xmlFile, loadXmlCb, connectionErrorCb);
   };
 
   if (Ardublockly.isWorkspaceEmpty()) {
-    loadXmlfileAccepted();
+   return loadXmlfileAccepted();
   } else {
+    
     Ardublockly.alertMessage(
         Ardublockly.getLocalStr('loadNewBlocksTitle'),
         Ardublockly.getLocalStr('loadNewBlocksBody'),

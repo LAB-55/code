@@ -55,6 +55,9 @@ ArdublocklyServer.sendRequest = function(
         }
         cb(jsonObjReceived);
       } else {
+        // alert("Check Filename.")
+        // window.location = "/";
+        // return false;
         // return a null element which will be dealt with in the front end
         cb(null);
       }
