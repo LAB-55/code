@@ -101,7 +101,7 @@ Ardublockly.loadXmlBlockFile = function(xmlFile, cbSuccess, cbError) {
         cbSuccess(success);
       } else {
         alert("Check Filename.")
-        window.location = "/";
+        window.location = "./";
         return false;
         // cbError();
       }
