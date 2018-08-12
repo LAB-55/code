@@ -67,31 +67,31 @@ Ardublockly.bindActionFunctions = function() {
   });
 
   
-  Ardublockly.bindClick_('menu_example_1', function() {
-    Ardublockly.loadServerXmlFile('./examples/blink.xml');
-    $('.button-collapse').sideNav('hide');
-    $('#sketch_name').val('blink');
-  });
-  Ardublockly.bindClick_('menu_example_2', function() {
-    Ardublockly.loadServerXmlFile('./examples/serial_print_ascii.xml');
-    $('.button-collapse').sideNav('hide');
-    $('#sketch_name').val('serial_print_ascii');
-  });
-  Ardublockly.bindClick_('menu_example_3', function() {
-    Ardublockly.loadServerXmlFile('./examples/serial_repeat_game.xml');
-    $('.button-collapse').sideNav('hide');
-    $('#sketch_name').val('serial_repeat_game');
-  });
-  Ardublockly.bindClick_('menu_example_4', function() {
-    Ardublockly.loadServerXmlFile('./examples/servo_knob.xml');
-    $('.button-collapse').sideNav('hide');
-    $('#sketch_name').val('servo_knob');
-  });
-  Ardublockly.bindClick_('menu_example_5', function() {
-    Ardublockly.loadServerXmlFile('./examples/stepper_knob.xml');
-    $('.button-collapse').sideNav('hide');
-    $('#sketch_name').val('stepper_knob');
-  });
+  // Ardublockly.bindClick_('menu_example_1', function() {
+  //   Ardublockly.loadServerXmlFile('./examples/blink.xml');
+  //   $('.button-collapse').sideNav('hide');
+  //   $('#sketch_name').val('blink');
+  // });
+  // Ardublockly.bindClick_('menu_example_2', function() {
+  //   Ardublockly.loadServerXmlFile('./examples/serial_print_ascii.xml');
+  //   $('.button-collapse').sideNav('hide');
+  //   $('#sketch_name').val('serial_print_ascii');
+  // });
+  // Ardublockly.bindClick_('menu_example_3', function() {
+  //   Ardublockly.loadServerXmlFile('./examples/serial_repeat_game.xml');
+  //   $('.button-collapse').sideNav('hide');
+  //   $('#sketch_name').val('serial_repeat_game');
+  // });
+  // Ardublockly.bindClick_('menu_example_4', function() {
+  //   Ardublockly.loadServerXmlFile('./examples/servo_knob.xml');
+  //   $('.button-collapse').sideNav('hide');
+  //   $('#sketch_name').val('servo_knob');
+  // });
+  // Ardublockly.bindClick_('menu_example_5', function() {
+  //   Ardublockly.loadServerXmlFile('./examples/stepper_knob.xml');
+  //   $('.button-collapse').sideNav('hide');
+  //   $('#sketch_name').val('stepper_knob');
+  // });
 
   // Floating buttons
   Ardublockly.bindClick_('button_ide_large', function() {
@@ -767,6 +767,7 @@ Ardublockly.shortMessage = function(message) {
  * @private
  */
 Ardublockly.bindClick_ = function(el, func) {
+  // console.log(el)
   if (typeof el == 'string') {
     el = document.getElementById(el);
   }
